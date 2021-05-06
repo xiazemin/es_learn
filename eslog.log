@@ -1,0 +1,217 @@
+ES-INFO: elastic: client stopped
+ES-INFO: elastic: client stopped
+ES-INFO: elastic: client stopped
+ES-INFO: elastic: client stopped
+ES-INFO: elastic: client stopped
+ES-INFO: elastic: client stopped
+ES-INFO: elastic: client stopped
+ES-INFO: elastic: client stopped
+ES-TRACE: HEAD /twitter/_doc/1 HTTP/1.1
+Host: 127.0.0.1:9200
+User-Agent: elastic/5.0.86 (darwin-arm64)
+Accept: application/json
+Authorization: Basic ZWxhc3RpYzpwYXNzd29yZA==
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 361
+Content-Type: application/json; charset=UTF-8
+
+
+ES-INFO: HEAD http://127.0.0.1:9200/twitter/_doc/1 [status:200, request:0.003s]
+ES-INFO: elastic: client stopped
+ES-TRACE: GET /twitter/_all/1 HTTP/1.1
+Host: 127.0.0.1:9200
+User-Agent: elastic/5.0.86 (darwin-arm64)
+Accept: application/json
+Authorization: Basic ZWxhc3RpYzpwYXNzd29yZA==
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.9.3-c4138e51121ef06a6404866cddc601906fe5c868 "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+
+{"_index":"twitter","_type":"_doc","_id":"1","_version":1,"_seq_no":0,"_primary_term":1,"found":true,"_source":{"user":"张三","message":"今儿天气不错啊，出去转转去","uid":2,"age":20,"city":"北京","province":"北京","country":"中国","address":"中国北京市海淀区","location":{"lat":"39.970718","lon":"116.325747"}, "DOB": "1999-04-01"}}
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.9.3-c4138e51121ef06a6404866cddc601906fe5c868 "[types removal] Specifying types in document get requests is deprecated, use the /{index}/_doc/{id} endpoint instead."
+ES-INFO: GET http://127.0.0.1:9200/twitter/_all/1 [status:200, request:0.081s]
+ES-INFO: elastic: client stopped
+ES-TRACE: HEAD /twitter/_doc/10 HTTP/1.1
+Host: 127.0.0.1:9200
+User-Agent: elastic/5.0.86 (darwin-arm64)
+Accept: application/json
+Authorization: Basic ZWxhc3RpYzpwYXNzd29yZA==
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 404 Not Found
+Content-Length: 60
+Content-Type: application/json; charset=UTF-8
+
+
+ES-INFO: HEAD http://127.0.0.1:9200/twitter/_doc/10 [status:404, request:0.002s]
+ES-INFO: elastic: client stopped
+ES-INFO: elastic: client stopped
+ES-TRACE: HEAD /twitter/_doc/10 HTTP/1.1
+Host: 127.0.0.1:9200
+User-Agent: elastic/5.0.86 (darwin-arm64)
+Accept: application/json
+Authorization: Basic ZWxhc3RpYzpwYXNzd29yZA==
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 404 Not Found
+Content-Length: 60
+Content-Type: application/json; charset=UTF-8
+
+
+ES-INFO: HEAD http://127.0.0.1:9200/twitter/_doc/10 [status:404, request:0.000s]
+ES-INFO: elastic: client stopped
+ES-INFO: elastic: client stopped
+ES-INFO: elastic: client stopped
+ES-TRACE: HEAD /twitter/_doc/1 HTTP/1.1
+Host: 127.0.0.1:9200
+User-Agent: elastic/5.0.86 (darwin-arm64)
+Accept: application/json
+Authorization: Basic ZWxhc3RpYzpwYXNzd29yZA==
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 361
+Content-Type: application/json; charset=UTF-8
+
+
+ES-INFO: HEAD http://127.0.0.1:9200/twitter/_doc/1 [status:200, request:0.000s]
+ES-INFO: elastic: client stopped
+ES-TRACE: HEAD /twitter/_doc/1 HTTP/1.1
+Host: 127.0.0.1:9200
+User-Agent: elastic/5.0.86 (darwin-arm64)
+Accept: application/json
+Authorization: Basic ZWxhc3RpYzpwYXNzd29yZA==
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 361
+Content-Type: application/json; charset=UTF-8
+
+
+ES-INFO: HEAD http://127.0.0.1:9200/twitter/_doc/1 [status:200, request:0.005s]
+ES-INFO: elastic: client stopped
+ES-TRACE: GET /twitter/_doc/1 HTTP/1.1
+Host: 127.0.0.1:9200
+User-Agent: elastic/5.0.86 (darwin-arm64)
+Accept: application/json
+Authorization: Basic ZWxhc3RpYzpwYXNzd29yZA==
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{"_index":"twitter","_type":"_doc","_id":"1","_version":1,"_seq_no":0,"_primary_term":1,"found":true,"_source":{"user":"张三","message":"今儿天气不错啊，出去转转去","uid":2,"age":20,"city":"北京","province":"北京","country":"中国","address":"中国北京市海淀区","location":{"lat":"39.970718","lon":"116.325747"}, "DOB": "1999-04-01"}}
+ES-INFO: GET http://127.0.0.1:9200/twitter/_doc/1 [status:200, request:0.037s]
+ES-INFO: elastic: client stopped
+ES-TRACE: HEAD /twitter/_doc/10 HTTP/1.1
+Host: 127.0.0.1:9200
+User-Agent: elastic/5.0.86 (darwin-arm64)
+Accept: application/json
+Authorization: Basic ZWxhc3RpYzpwYXNzd29yZA==
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 404 Not Found
+Content-Length: 60
+Content-Type: application/json; charset=UTF-8
+
+
+ES-INFO: HEAD http://127.0.0.1:9200/twitter/_doc/10 [status:404, request:0.002s]
+ES-INFO: elastic: client stopped
+ES-TRACE: PUT /twitter/_doc/10 HTTP/1.1
+Host: 127.0.0.1:9200
+User-Agent: elastic/5.0.86 (darwin-arm64)
+Content-Length: 238
+Accept: application/json
+Authorization: Basic ZWxhc3RpYzpwYXNzd29yZA==
+Content-Type: application/json
+Accept-Encoding: gzip
+
+{"user":"双榆树-张三","message":"今儿天气不错啊，出去转转去","uid":2,"age":20,"city":"北京","province":"北京","country":"中国","address":"中国北京市海淀区","location":{"lat":"39.970718","lon":"116.325747"}}
+ES-TRACE: HTTP/1.1 201 Created
+Content-Type: application/json; charset=UTF-8
+Location: /twitter/_doc/10
+
+{"_index":"twitter","_type":"_doc","_id":"10","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":7,"_primary_term":1}
+ES-INFO: PUT http://127.0.0.1:9200/twitter/_doc/10 [status:201, request:0.081s]
+ES-INFO: elastic: client stopped
+ES-TRACE: HEAD /twitter/_doc/10 HTTP/1.1
+Host: 127.0.0.1:9200
+User-Agent: elastic/5.0.86 (darwin-arm64)
+Accept: application/json
+Authorization: Basic ZWxhc3RpYzpwYXNzd29yZA==
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 351
+Content-Type: application/json; charset=UTF-8
+
+
+ES-INFO: HEAD http://127.0.0.1:9200/twitter/_doc/10 [status:200, request:0.060s]
+ES-INFO: elastic: client stopped
+ES-TRACE: POST /twitter/_doc/10/_update HTTP/1.1
+Host: 127.0.0.1:9200
+User-Agent: elastic/5.0.86 (darwin-arm64)
+Transfer-Encoding: chunked
+Accept: application/json
+Authorization: Basic ZWxhc3RpYzpwYXNzd29yZA==
+Content-Type: application/json
+Accept-Encoding: gzip
+
+f6
+{"doc":{"address":"中国北京市海淀区","age":20,"city":"北京","country":"中国","location":{"lat":"39.970718","lon":"116.325747"},"message":"今儿天气不错啊，出去转转去","province":"北京","uid":2,"user":"双榆树-张三"}}
+0
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+Warning: 299 Elasticsearch-7.9.3-c4138e51121ef06a6404866cddc601906fe5c868 "[types removal] Specifying types in document update requests is deprecated, use the endpoint /{index}/_update/{id} instead."
+
+{"_index":"twitter","_type":"_doc","_id":"10","_version":1,"result":"noop","_shards":{"total":0,"successful":0,"failed":0},"_seq_no":7,"_primary_term":1}
+ES-ERROR: Deprecation warning: 299 Elasticsearch-7.9.3-c4138e51121ef06a6404866cddc601906fe5c868 "[types removal] Specifying types in document update requests is deprecated, use the endpoint /{index}/_update/{id} instead."
+ES-INFO: POST http://127.0.0.1:9200/twitter/_doc/10/_update [status:200, request:0.032s]
+ES-INFO: elastic: client stopped
+ES-TRACE: DELETE /twitter/_doc/10 HTTP/1.1
+Host: 127.0.0.1:9200
+User-Agent: elastic/5.0.86 (darwin-arm64)
+Accept: application/json
+Authorization: Basic ZWxhc3RpYzpwYXNzd29yZA==
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+
+{"_index":"twitter","_type":"_doc","_id":"10","_version":2,"result":"deleted","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":8,"_primary_term":1}
+ES-INFO: DELETE http://127.0.0.1:9200/twitter/_doc/10 [status:200, request:0.071s]
+ES-INFO: elastic: client stopped
+ES-TRACE: HEAD /twitter/_doc/1 HTTP/1.1
+Host: 127.0.0.1:9200
+User-Agent: elastic/5.0.86 (darwin-arm64)
+Accept: application/json
+Authorization: Basic ZWxhc3RpYzpwYXNzd29yZA==
+Content-Type: application/json
+
+
+ES-TRACE: HTTP/1.1 200 OK
+Content-Length: 361
+Content-Type: application/json; charset=UTF-8
+
+
+ES-INFO: HEAD http://127.0.0.1:9200/twitter/_doc/1 [status:200, request:0.001s]
+ES-INFO: elastic: client stopped

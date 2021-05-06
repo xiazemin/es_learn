@@ -269,3 +269,29 @@ PUT twitter/_mapping
     }
   }
 }
+
+
+通常，一个索引中的所有类型共享相同的字段和设置。 _default_ 映射更加方便地指定通用设置，而不是每次创建新类型时都要重复设置。 _default_ 映射是新类型的模板。在设置 _default_ 映射之后创建的所有类型都将应用这些缺省的设置，除非类型在自己的映射中明确覆盖这些设置。
+
+https://www.elastic.co/guide/cn/elasticsearch/guide/current/default-mapping.html
+
+
+elasticsearch "dynamic": "strict",
+https://stackoverflow.com/questions/65166024/how-to-update-index-mapping-with-dynamic-as-strict-in-future
+
+动态映射（dynamic：true）：动态添加新的字段（或缺省）。
+静态映射（dynamic：false）：忽略新的字段。在原有的映射基础上，当有新的字段时，不会主动的添加新的映射关系，只作为查询结果出现在查询中。
+严格模式（dynamic： strict）：如果遇到新的字段，就抛出异常。
+
+https://www.cnblogs.com/Neeo/articles/10585035.html
+https://www.elastic.co/guide/cn/elasticsearch/guide/current/dynamic-mapping.html
+
+
+doc_values和fielddata就是用来给文档建立正排索引的。他俩一个很显著的区别是，前者的工作地盘主要在磁盘，而后者的工作地盘在内存。
+
+对于非text字段类型，doc_values默认情况下是打开的
+https://blog.csdn.net/pony_maggie/article/details/104135289
+
+ES允许对每一个字段配置得分算法或者相似算法，similarity就可以让我们选择不同于TF/IDF的相似算法.BM25
+
+https://blog.csdn.net/zhanglh046/article/details/78529208
