@@ -1,0 +1,4 @@
+https://elasticsearch.cn/article/446
+
+在ES5.x里，一定要注意数值类型是否需要做范围查询，看似数值，但其实只用于Term或者Terms这类精确匹配的，应该定义为keyword类型。典型的例子就是索引web日志时常见的HTTP Status code。
+如果RangeQuery的结果集很大，并且还需要和其他结果集更小的查询条件做AND的，应该升级到ES5.4+，该版本在底层引入的indexOrDocValuesQuery，可以极大提升该场景下RangeQuery的查询速度。
