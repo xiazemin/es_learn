@@ -1,0 +1,71 @@
+增量更新mapping
+
+https://blog.csdn.net/qq_27818541/article/details/109391849
+
+
+GET xxx/_mapping
+
+
+PUT xxx/_mappings
+
+
+{
+  "error" : {
+    "root_cause" : [
+      {
+        "type" : "mapper_parsing_exception",
+        "reason" : "Root mapping definition has unsupported parameters:  [xx : {type=date}] [xxx : {type=boolean}] [xxxxx : {type=integer}]"
+      }
+    ],
+    "type" : "mapper_parsing_exception",
+    "reason" : "Root mapping definition has unsupported parameters:  [xx : {type=date}] [xxx : {type=boolean}] [xxxxx : {type=integer}]"
+  },
+  "status" : 400
+}
+
+
+https://blog.csdn.net/u014646662/article/details/94718834
+
+
+少了properties
+
+
+PUT xxx/_mapping
+{
+  "properties":{
+  }
+}
+
+PUT api 支持增量更新mapping
+
+
+
+PUT xxx/
+{
+   "settings": {
+   }
+    "mappings": {
+        全量属性
+    }
+}
+
+
+{
+  "error" : {
+    "root_cause" : [
+      {
+        "type" : "resource_already_exists_exception",
+        "reason" : "index [x x/zuDOu1lTTKuX203Vv6ENTg] already exists",
+        "index_uuid" : "zuDOu1lTTKuX203Vv6ENTg",
+        "index" : "file"
+      }
+    ],
+    "type" : "resource_already_exists_exception",
+    "reason" : "index [xxx/zuDOu1lTTKuX203Vv6ENTg] already exists",
+    "index_uuid" : "zuDOu1lTTKuX203Vv6ENTg",
+    "index" : "file"
+  },
+  "status" : 400
+}
+
+这个是不允许的

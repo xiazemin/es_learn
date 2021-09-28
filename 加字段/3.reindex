@@ -1,0 +1,11 @@
+场景：部分字段没有mapping
+
+POST _reindex
+{
+  "source": {
+    "index": "file"
+  },
+  "dest": {
+    "index": "file1"
+  }
+}
