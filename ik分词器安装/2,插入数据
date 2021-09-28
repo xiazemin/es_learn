@@ -1,0 +1,43 @@
+mapper [guid] cannot be changed from type [keyword] to [text]
+
+https://q.cnblogs.com/q/132655/
+
+
+因为ElasticSearch 7.x 不再支持type。
+
+https://blog.csdn.net/weixin_38232096/article/details/109720844
+把index {"_type":"xxx"}干掉
+
+
+
+"type" : "strict_dynamic_mapping_exception",
+          "reason" : "mapping set to strict, dynamic introduction of [createdBy] within [_doc] is not allowed"
+
+
+  "mappings": {
+    "dynamic": "strict",
+
+多余的字段会报错
+
+
+
+应用背景：
+1、当你的数据量过大，而你的索引最初创建的分片数量不足，导致数据入库较慢的情况，此时需要扩大分片的数量，此时可以尝试使用Reindex。
+
+2、当数据的mapping需要修改，但是大量的数据已经导入到索引中了，重新导入数据到新的索引太耗时；但是在ES中，一个字段的mapping在定义并且导入数据之后是不能再修改的，
+
+所以这种情况下也可以考虑尝试使用Reindex。
+
+Reindex：
+ES提供了_reindex这个API。相对于我们重新导入数据肯定会快不少，实测速度大概是bulk导入数据的5-10倍。
+
+
+https://www.cnblogs.com/Ace-suiyuan008/p/9985249.html
+
+https://cloud.tencent.com/developer/article/1621564
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html
+
+对于es 里面有的数据但是没有做mapping，需要reindex ，在字段上建立索引
+
+对于没有的数据需要重新插入
