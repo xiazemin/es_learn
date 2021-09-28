@@ -1,0 +1,22 @@
+在脚本中需要访问文档中的字段，此时有三种方式可以访问，分别是 doc , _fields , _source。这三个字段使用的时候还是有区别的。
+
+doc
+doc 可以很方便的使用文档中的字段，通过 doc[‘field_name’]来访问,访问速度比较快，因为相关的值已经加载到内存中了。
+但是它有一些使用限制: 访问的字段不能是 object 类型;只对 not-analyzed 字段有效
+
+_fields
+_fields 使用方式同 doc 一样的，不过需要注意的是 _fields 必须是 mapping 中 store 的字段
+
+同时性能会低于加到内存中的doc。
+默认情况下，创建 mapping 时候如果没有指定 store为 true 则 相应的字段是没有 stored 的。
+
+_source
+如果创建 mapping 的时候没有禁用 source , 则在脚本中可以使用 _source 来访问文档内容。_source的内容实质上就是一段 json。所以可以通说 _source.obj2.obj1.field3 来访问。
+
+如果访问单个字段，_fields 比 _source 快
+如果访问多个字段，_source 比 _fields 快
+
+https://javasgl.github.io/elasticsearch-function-doc/
+
+https://www.cnblogs.com/shoufeng/p/10679725.html
+
