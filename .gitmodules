@@ -1,0 +1,3 @@
+[submodule "分词器/elasticsearch-analysis-ik"]
+	path = 分词器/elasticsearch-analysis-ik
+	url = https://github.com/medcl/elasticsearch-analysis-ik
